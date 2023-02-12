@@ -42,18 +42,6 @@ public interface BanqueService {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<proxy.Compte>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listComptes", targetNamespace = "http://ws.tp1.org/", className = "proxy.ListComptes")
-    @ResponseWrapper(localName = "listComptesResponse", targetNamespace = "http://ws.tp1.org/", className = "proxy.ListComptesResponse")
-    @Action(input = "http://ws.tp1.org/BanqueService/listComptesRequest", output = "http://ws.tp1.org/BanqueService/listComptesResponse")
-    public List<Compte> listComptes();
-
-    /**
-     * 
      * @param code
      * @return
      *     returns proxy.Compte
@@ -66,5 +54,17 @@ public interface BanqueService {
     public Compte getCompte(
         @WebParam(name = "code", targetNamespace = "")
         int code);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<proxy.Compte>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listComptes", targetNamespace = "http://ws.tp1.org/", className = "proxy.ListComptes")
+    @ResponseWrapper(localName = "listComptesResponse", targetNamespace = "http://ws.tp1.org/", className = "proxy.ListComptesResponse")
+    @Action(input = "http://ws.tp1.org/BanqueService/listComptesRequest", output = "http://ws.tp1.org/BanqueService/listComptesResponse")
+    public List<Compte> listComptes();
 
 }
