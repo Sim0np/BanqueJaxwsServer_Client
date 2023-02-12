@@ -22,3 +22,7 @@
 <img src="Captures/Capture d’écran 2023-02-12 à 14.49.38.png"/>
 <br><br><br>
 
+<li>Test via le client Java </li>
+<br>
+<img src="Captures/Capture d’écran 2023-02-12 à 18.11.17.png"/>
+<br><br><br>
